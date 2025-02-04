@@ -1,0 +1,21 @@
+<div>
+    <h1>
+        Next player: {{player}}
+    </h1>
+
+    @if(winner) {
+        <h2>
+            the winner is: {{winner}}
+        </h2>
+    }
+
+    <button (click)="newGame()">
+        new game
+    </button>
+
+    <main>
+        @for (val of squares(); track $index){
+            <app-square [value]="val" (click)="move($index)"/>
+        }
+    </main>
+</div>
