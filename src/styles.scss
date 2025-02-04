@@ -1,11 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
-main {
-    display: grid;
-    grid-template-columns: 200px 200px 200px;
-    grid-gap: 0px;
-}
+@use 'tailwindcss/base';
 
-app-square {
-    border: 1px gray solid;
-    height: 200px;
+@use 'tailwindcss/components';
+
+@use 'tailwindcss/utilities';
+
+.square {
+    width: 25vw;
+    height: 25vw;
+    max-width: 200px;
+    max-height: 200px;
 }

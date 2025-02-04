@@ -1,3 +1,19 @@
-<button>
-    {{ value }}
-</button>
+@if (!value) {
+    <button class="btn btn-info btn-outline rounded-badge square">
+        <h1>
+            {{ value }}
+        </h1>
+    </button>
+} @else if (value === 'X') {
+    <button class="btn btn-accent border-gray-700 square">
+        <h1 class="text-8xl text-white">
+            {{ value }}
+        </h1>
+    </button>
+} @else {
+    <button class="btn btn-warning border-gray-700 square">
+        <h1 class="text-8xl text-white">
+            {{ value }}
+        </h1>
+    </button>
+}
